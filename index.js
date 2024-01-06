@@ -19,7 +19,7 @@ app.get("/noAuth", async (req, res) => {
   
  try{
     const result = await axios.get(API_URL + "/random");
-  res.render("index.ejs",{ content : JSON.stringify(result.data)});
+  res.render("index.ejs",{ content : JSON.stringify(result.data)})
 
  }catch(error){
      
@@ -30,7 +30,7 @@ app.get("/noAuth", async (req, res) => {
 
 app.get("/basicAuth", async (req, res) => {
   
-   try{
+   try{ 
     const result = await axios.get( API_URL + "/all?page=1",{
       auth: {
         username: yourUsername,
